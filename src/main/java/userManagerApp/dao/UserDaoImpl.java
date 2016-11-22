@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import userManagerApp.model.User;
 import java.util.List;
 
-public class userDaoImpl implements userDAO {
+public class UserDaoImpl implements UserDAO {
     private SessionFactory sessionFactory;
 
     public void setSessionFactory(SessionFactory sessionFactory) {
