@@ -1,3 +1,4 @@
-.gitignore
 *.iml
-.idea/*
+/.idea/*
+/.idea/*.*
+.gitignore
