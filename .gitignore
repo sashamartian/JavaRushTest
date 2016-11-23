@@ -1,3 +1,5 @@
 *.iml
 .gitignore
 /.idea/
+/pom.xml
+/target/

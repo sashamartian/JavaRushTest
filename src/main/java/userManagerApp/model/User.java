@@ -1,6 +1,7 @@
 package userManagerApp.model;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -62,6 +63,20 @@ public class User {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
+    }
+
+    public String getFormatedAdmin() {
+        if(isAdmin) {
+            return "Администратор";
+        }
+
+        return "Пользователь";
+    }
+
+    public String getFormatedDate() {
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+
+        return format.format(createdDate);
     }
 
     @Override
