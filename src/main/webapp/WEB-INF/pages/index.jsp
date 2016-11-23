@@ -26,7 +26,7 @@
                         <td>${user.formatedAdmin}</td>
                         <td>${user.formatedDate}</td>
                         <td>
-                            <a href="<c:url value='/usereditor/${user.id}'/>">Редактировать</a><br>
+                            <a href="<c:url value='/useredit/${user.id}'/>">Редактировать</a><br>
                             <a href="<c:url value='/delete/${user.id}'/>">Удалить</a>
                         </td>
                     </tr>

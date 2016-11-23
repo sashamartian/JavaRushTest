@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import userManagerApp.model.User;
@@ -58,5 +59,15 @@ public class UserController {
 
         return "redirect: /UserManger/";
     }
+
+    @RequestMapping("/useredit/{id}")
+    public String editUser(@PathVariable("id") int id, Model model) {
+        User user =  this.userService.getUserById(id);
+        System.out.println(user);
+        model.addAttribute("user", user);
+
+        return "users_edit";
+    }
+
 
 }
