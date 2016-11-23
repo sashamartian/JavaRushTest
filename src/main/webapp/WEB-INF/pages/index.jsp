@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1>Список пользователей</h1>
+        <a class="add" href="<c:url value="/useradd" />">Добавить пользователя</a>
         <table >
             <tr class="table_title">
                 <th width="100">Id</th>
