@@ -69,5 +69,12 @@ public class UserController {
         return "users_edit";
     }
 
+    @RequestMapping("/delete/{id}")
+    public String deleteUser(@PathVariable("id") int id) {
+        if(id > 0)
+            this.userService.deleteUser(id);
+
+        return "redirect: /UserManger/";
+    }
 
 }
